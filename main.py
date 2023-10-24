@@ -2,16 +2,17 @@ import os
 import random
 from clear import clear
 from between import between
+from include_numeric import include_numeric
 
 def main():
   clear()
   length = None
   password = ''
   include = [
-    [47, 58],
     [64, 91],
     [96, 123]
   ]
+  include_numeric(include)
   min_char = 48
   max_char = 122
   while type(length) is not int:
