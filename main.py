@@ -1,20 +1,15 @@
 import os
 import random
+import chars
 from clear import clear
 from between import between
-from include_numeric import include_numeric
+from set_numeric import set_numeric
 
 def main():
   clear()
   length = None
   password = ''
-  include = [
-    [64, 91],
-    [96, 123]
-  ]
-  include_numeric(include)
-  min_char = 48
-  max_char = 122
+  set_numeric()
   while type(length) is not int:
     try:
       length = int(input('Enter password length : '))
@@ -23,9 +18,9 @@ def main():
   clear()
   password_length = 0
   while password_length < length:
-    char = random.randint(min_char, max_char)
-    while not between(char, include):
-      char = random.randint(min_char, max_char)
+    char = random.randint(chars.min, chars.max)
+    while not between(char, chars.list):
+      char = random.randint(chars.min, chars.max)
     password += chr(char)
     password_length += 1
   file = open('password.txt', 'w')
