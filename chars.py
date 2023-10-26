@@ -11,7 +11,4 @@ def append(*ranges):
     char_list.append(range)
     length += 1
 
-min_char = 48
-max_char = 122
-
 list = char_list
