@@ -26,7 +26,7 @@ def main():
   password_length = 0
 
   while password_length < length:
-    index = random.randint(0, len(chars.list) - 1)
+    index = random.randint(0, chars.length - 1)
     [min_char, max_char] = chars.list[index]
     char = random.randint(min_char, max_char)
     password += chr(char)
@@ -41,4 +41,3 @@ def main():
 
 
 main()
-
