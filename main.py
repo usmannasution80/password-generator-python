@@ -20,11 +20,16 @@ def main():
   clear()
   password_length = 0
   while password_length < length:
-    char = random.randint(chars.min, chars.max)
+    index = random.randint(0, len(chars.list) - 1)
+    [min_char, max_char] = chars.list[index]
+    char = random.randint(min_char, max_char)
+    password += chr(char)
+    password_length += 1
+    '''char = random.randint(chars.min, chars.max)
     while not between(char, chars.list):
       char = random.randint(chars.min, chars.max)
     password += chr(char)
-    password_length += 1
+    password_length += 1'''
   file = open('password.txt', 'w')
   file.write(password)
   file.close()
