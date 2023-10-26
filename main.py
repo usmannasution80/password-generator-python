@@ -4,12 +4,14 @@ import chars
 from clear import clear
 from between import between
 from set_numeric import set_numeric
+from set_basic_symbols import set_basic_symbols
 
 def main():
   clear()
   length = None
   password = ''
   set_numeric()
+  set_basic_symbols()
   while type(length) is not int:
     try:
       length = int(input('Enter password length : '))
