@@ -2,7 +2,6 @@ import os
 import random
 import chars
 from clear import clear
-from between import between
 from set_numeric import set_numeric
 from set_basic_symbols import set_basic_symbols
 
